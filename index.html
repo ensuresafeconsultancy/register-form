@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ensuresafe</title>
+    <!--json-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!--tailwind-->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!--style-->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+
+<body>
+    <div class="container bg-white mb-2" id="register">
+        <form action="connect.php" method="post" enctype="multipart/form-data">
+            <div class="row">
+                <div class="col-12 col-lg-12 ps-5">
+                    <div class="content">
+                        <h5 style="text-align: center;">ENSURE SAFE COURSE REGISTRATION FORM</h5>
+                        <h5>APPLY WORKPLACE SAFETY AND HEALTH IN PROCESS PLANT (AWSHPP-English-Blended)-S$90</h5>
+                        <h6 class=" font-bold mt-1">Course Overview</h6>
+                        <p>This “Apply Workplace Safety and Health in Process Plant course” is previously known as Oil and Petrochemical Safety Orientation Course (OPSOC). On completion of this unit, learners will have the skills and knowledge in applying workplace safety and health practices to ensure the safety of oneself and others at work in the Oil and Petrochemical industry.</p>
+                        <h6 class="font-bold mt-1">Who should attend this course?</h6>
+                        <p>This course is mandatory to all personnel who are working in the Oil and Petrochemical plants in Singapore.<br>
+                            The occupations that this unit would be relevant to include but not limited to:
+                            Workers, Supervisors, Technicians, engineers or Managers who are involved in planning /assessment or management of work activities in the process industries</p>
+                        <h6 class="font-bold mt-1">Course Objectives</h6>
+                        <p> • Understand legal obligations to Apply Workplace Safety and Health.<br>
+                            • Identify hazards in oil and petrol chemical plant and other sites within the premises.<br>
+                            • Recognize all types of industrial safety signs.<br>
+                            • Put on Personal Protective Equipment (PPE)<br>
+                            • Take safety precautions when working with different hazards.<br>
+                            • Respond in case of fire or emergency.<br></p>
+                        <h6 class="font-bold mt-1">Pre-Requisites / Assume Skills and Knowledge</h6>
+                        <p>Learners must be able to apply numbers, listen, read, speak & write English at a proficiency level equivalent to the Employability Skills System (ESS-Level-2)</p>
+                        <h6 class="font-bold mt-1">Medium of Instruction</h6>
+                        <p>English
+
+
+
+                    </div>
+                    <!--schedule-->
+                    <div id="schedule">
+                        <label>WORKPLACE SAFETY AND HEALTH CONTROL MEASURES- Class type</label>
+                        <div class="text"><input type="radio" id="age1" name="Class_type" value="sunday">sunday</div>
+                        <div class="text"><input type="radio" id="age2" name="Class_type" value="dayclass">day class </div>
+                        <div class="text"><input type="radio" id="age3" name="Class_type" value="weekendclass">weekend class </div>
+
+                        <div id="sunday" class="time" style="display: none;" class="flex flex-col">
+                            <label>WORKPLACE SAFETY AND HEALTH CONTROL MEASURES-Sunday Class Schedule:</label><br>
+                            <input type="radio" name="Sunday_Class" value="7 & 14 apr 2024 (9.00am to 6.00pm)"> 7 & 14 apr 2024
+                            (9.00am to 6.00pm)<br>
+                            <input type="radio" name="Sunday_Class" value="21 & 28 apr 2024 (9.00am to 6.00pm)"> 21 & 28 apr 2024
+                            (9.00am to 6.00pm)<br>
+                        </div>
+
+                        <div id="dayclass" class="time" style="display: none;" class="flex flex-col">
+                            <label>WORKPLACE SAFETY AND HEALTH CONTROL MEASURES-Day Class Schedule:</label><br>
+                            <input type="radio" name="Day_Class" value="4 & 5 apr 2024 (9.00am to 6.00pm)"> 4 & 5 apr 2024 (9.00am to 6.00pm)<br>
+                            <input type="radio" name="Day_Class" value="11 & 12 apr 2024 (9.00am to 6.00pm)"> 11 & 12 apr 2024
+                            (9.00am
+                            to 6.00pm)<br>
+                            <input type="radio" name="Day_Class" value="18 & 19 apr 2024 (9.00am to 6.00pm)"> 18 & 19 apr 2024
+                            (9.00am
+                            to 6.00pm)<br>
+                            <input type="radio" name="Day_Class" value="25 & 26 apr 2024 (9.00am to 6.00pm)"> 25 & 26 apr 2024
+                            (9.00am
+                            to 6.00pm)<br>
+                        </div>
+
+                        <div id="weekendclass" class="time" style="display: none;" class="flex flex-col">
+                            <label>WORKPLACE SAFETY AND HEALTH CONTROL MEASURES-Sat & Sun Class Schedule:</label><br>
+                            <input type="radio" name="Sat&Sun_Class" value="6 & 7 apr 2024 (9.00am to 6.00pm)"> 6 & 7 apr 2024
+                            (9.00am
+                            to 6.00pm)<br>
+                            <input type="radio" name="Sat&Sun_Class" value="13 & 14 apr 2024 (9.00am to 6.00pm)"> 13 & 14 apr 2024
+                            (9.00am to 6.00pm)<br>
+                            <input type="radio" name="Sat&Sun_Class" value="20 & 21 apr 2024 (9.00am to 6.00pm)"> 20 & 21 apr 2024
+                            (9.00am to 6.00pm)<br>
+                            <input type="radio" name="Sat&Sun_Class" value="27 & 28 mar 2024 (9.00am to 6.00pm)"> 27 & 28 mar 2024
+                            (9.00am to 6.00pm)<br>
+                        </div>
+                    </div>
+
+                    <script>
+                        $('.text').click(function() {
+                            $(".text").attr('checked', false)
+                            _get_class_type = "#" + $(this).find("input").val()
+                            console.log(_get_class_type)
+                            $('.time').css({
+                                'display': 'none'
+                            })
+                            $(_get_class_type).css({
+                                'display': 'block'
+                            })
+                        })
+                    </script>
+
+                    <!--type of registration-->
+                    <div>
+                        <label>Type of Registration</label>
+                        <div class="company"><input type="radio" name="Type_of_Registration" value="company"> company</div>
+                        <div class="company"><input type="radio" name="Type_of_Registration" value="individual"> individual</div>
+                        <!--company-->
+                        <div id="company" class="details" style="display: none;">
+                            <h5>enter the company details:</h5>
+
+                            <label>company name:</label>
+                            <input type="text" class="form-control" name="company_name">
+
+                            <label>Company UEN/Reg No:</label>
+                            <input type="text" class="form-control" name="Company_uen_reg_no"><br>
+
+                            <label>Contact Person Name:</label>
+                            <input type="text" class="form-control" name="Contact_Person_Name"><br>
+
+                            <label>Contact Person Email:</label>
+                            <input type="text" class="form-control" name="Contact_Person_Email"><br>
+
+                            <label>Contact Person Contact No</label>
+                            <input type="text" class="form-control" name="Contact_Person_Contact_No"><br>
+
+                            <h5>Enter participant details</h5>
+
+
+                            <div class="text">
+                                <label>Participant name</label>
+                                <input type="text" class="form-control" name="Participant_name" value="NAME:">
+
+                                <br>
+
+                            </div>
+                        </div>
+                        <!--single person-->
+                        <div id="individual" class="details" style="display: none;">
+                            <h5>Enter participant details</h5>
+
+                            <div class="text">
+                                <label>Participant name</label>
+                                <input type="text" class="form-control" name="single_Participant_name" value="NAME:"><br>
+
+                                
+                            </div>
+
+
+                        </div>
+
+                        <script>
+                            $('.company').click(function() {
+                                $(".company").attr('checked', false)
+                                _get_class_type = "#" + $(this).find("input").val()
+                                console.log(_get_class_type)
+                                $('.details').css({
+                                    'display': 'none'
+                                })
+                                $(_get_class_type).css({
+                                    'display': 'block'
+                                })
+                            })
+                        </script>
+
+                        <div id="NAME:" class="time" style="display: none;" class="flex flex-col">
+
+                            <h5>Enter NRIC No:</h5>
+
+                            <label>NRIC NO:</label>
+                            <input type="text" class="form-control" name="nric_no"><br><br>
+
+
+                            <h5>enter personal details</h5>
+
+
+                            <label>Date Of Brith</label><br>
+                            <input type="date" name="Date_Of_Brith"><br>
+
+                            <label>GENDER</label><br>
+                            <input type="radio" name="Gender" value="male"> male<br>
+                            <input type="radio" name="Gender" value="female"> female<br>
+
+                            <label>nationality</label><br>
+                            <input type="radio" name="nationality" value="singaporean"> singaporean<br />
+                            <input type="radio" name="nationality" value="singapor pr"> singapor pr<br />
+                            <input type="radio" name="nationality" value="singaporean"> malasiyan<br />
+                            <input type="radio" name="nationality" value="indian"> indian<br />
+                            <input type="radio" name="nationality" value="chinese"> chinese<br />
+
+
+
+                            <label>Race</label><br>
+                            <input type="radio" name="race" value="chinese"> chinese<br>
+                            <input type="radio" name="race" value="malay"> malay<br />
+                            <input type="radio" name="race" value="indian"> indian<br />
+                            <input type="radio" name="race" value="bangladeshi"> bangladeshi<br />
+                            <input type="radio" name="race" value="filipino"> filipino<br />
+
+
+
+                            <label>contact</label>
+                            <input type="text" class="form-control" name="contact"><br><br>
+
+                            <label>E-mail</label>
+                            <input type="email" class="form-control" name="email"><br><br>
+
+                            <label>Years of Experience</label>
+                            <input type="text" class="form-control" name="experience"><br><br>
+
+                            <label>Salary Range</label><br>
+                            <input type="radio" name="salary" value="less then $1000"> less then $1000<br />
+                            <input type="radio" name="salary" value="$1000 to $1999"> $1000 to $1999<br />
+                            <input type="radio" name="salary" value="$2000 to $2999"> $2000 to $2999<br />
+                            <input type="radio" name="salary" value="$3000 and above"> $3000 and above<br /><br>
+
+                            <label>Highest Qualification</label><br>
+                            <input type="radio" name="Qualification" value="degree"> degree<br />
+                            <input type="radio" name="Qualification" value="diploma"> diploma<br />
+                            <input type="radio" name="Qualification" value="Gce o level/sslc/hsc"> Gce o level/sslc/hsc<br />
+
+
+                            <label>Upload Educational certificates</label><br>
+                            <input type="file" id="myFile" name="certificate"><br /><br />
+
+                            <label>photo of the Student</label><br>
+                            <input type="file" id="myFile" name="photo"><br /><br />
+
+                            <label>Signature</label><br>
+                            <input type="text" class="form-control" name="signature">
+
+
+                            <h6>I declare that all the above details are proveided</h6>
+
+
+
+
+                            <script>
+                                $('.text').click(function() {
+                                    $(".text").attr('checked', false)
+                                    _get_class_type = "#" + $(this).find("input").val()
+                                    console.log(_get_class_type)
+                                    $('.time').css({
+                                        'display': 'none'
+                                    })
+                                    $(_get_class_type).css({
+                                        'display': 'block'
+                                    })
+                                })
+                            </script>
+                        </div>
+
+
+
+
+
+                        <!--js-->
+                        <script>
+                            $(document).ready(function() {
+                                $('.text').click(function() {
+                                    $(".text").attr('checked', false);
+                                    let _get_class_type = "#" + $(this).find("input").val();
+                                    console.log(_get_class_type);
+                                    $('.time').css({
+                                        'display': 'none'
+                                    });
+                                    $(_get_class_type).css({
+                                        'display': 'block'
+                                    });
+                                });
+
+                                $('.company').click(function() {
+                                    $(".company").attr('checked', false);
+                                    let _get_class_type = "#" + $(this).find("input").val();
+                                    console.log(_get_class_type);
+                                    $('.details').css({
+                                        'display': 'none'
+                                    });
+                                    $(_get_class_type).css({
+                                        'display': 'block'
+                                    });
+                                });
+
+                                $('.element').click(function() {
+                                    $(".element").attr('checked', false);
+                                    let _get_class_type = "#" + $(this).find("input").val();
+                                    console.log(_get_class_type);
+                                    $('.data').css({
+                                        'display': 'none'
+                                    });
+                                    $(_get_class_type).css({
+                                        'display': 'block'
+                                    });
+                                });
+
+                                $('.sunday').click(function() {
+                                    $(".sunday").attr('checked', false);
+                                    let _get_class_type = "#" + $(this).find("input").val();
+                                    console.log(_get_class_type);
+                                    $('.data').css({
+                                        'display': 'none'
+                                    });
+                                    $(_get_class_type).css({
+                                        'display': 'block'
+                                    });
+                                });
+                            });
+                        </script>
+
+
+                    </div>
+
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+
+</body>
+
+</html>
